@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center">
+  <div *ngIf="isLoading" class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<div class="row card-group">
+  <div class="col-4" *ngFor="let recipe of datas">
+    <img
+      class="card-img-top"
+      src="{{ recipe.strMealThumb }}"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ recipe.strMeal }}</h5>
+    </div>
+  </div>
+</div>
